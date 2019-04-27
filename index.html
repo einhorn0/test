@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    p {
+        color: blue;
+        font-size: 40px;
+      }
+  </style>
+<head>
+<title>domislawa</title>
+</head>
+
+<body>
+<p>Domi to jest Einhorn</p>
+</body>
+
+  <script>
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+}
+    let i = 0;
+    setInterval(() => {
+      i ++;
+      document.querySelector('p').style.transform = 'rotate(' + i % 360 + 'deg)';
+      document.querySelector('p').style.color = getRandomColor();
+    },50);
+  </script>
+
+</html>
